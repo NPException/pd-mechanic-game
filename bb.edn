@@ -43,7 +43,7 @@
                                         ; `.pdx.zip` will be appended to its attachments.
                                         ; Any key from the pdxinfo file can be used as placeholder.
                                         ; (Another useful example is "v${version}-b${buildNumber}")
-                                        :tag  "v${version}"
+                                        :tag  "${version}"
                                         ; When a GitHub release is created, this will determine if the type of the release.
                                         ; Possible values are ["draft", "prerelease", "release"].
                                         ; "draft": Draft releases are only visible to the repo owner on GitHub.
