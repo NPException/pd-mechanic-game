@@ -9,7 +9,7 @@
   (do (def config {
                    ; Name of the zip file when the `build-release` task is called.
                    ; Any key from the pdxinfo file can be used as placeholder.
-                   :release-name       "${name} v${version}_b${buildNumber}"
+                   :release-name       "${name} (${version} b${buildNumber})"
                    ; The location of the Playdate SDK. If this is empty, the build process
                    ; will try to get the path from the `PLAYDATE_SDK_PATH` environment variable.
                    :playdate-sdk-path  ""
