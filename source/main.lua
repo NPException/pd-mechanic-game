@@ -2,6 +2,7 @@ import "lib/SDK_PATCHES"
 import "lib/LUA_CHANGES"
 import "CoreLibs/object"
 import "CoreLibs/sprites"
+import "CoreLibs/graphics"
 
 local Wrench = require("classes/wrench")
 
@@ -16,13 +17,12 @@ local wrench = Wrench(200, 120)
 wrench:add()
 
 function playdate.update()
-  wrench:setRotation(playdate.getCrankPosition())
+  wrench:setAngle(playdate.getCrankPosition())
 
   gfx.sprite.update()
 
-  -- cross at center to check wrench alignment
-  gfx.drawLine(200, 100, 200, 140)
-  gfx.drawLine(180, 120, 220, 120)
+  -- circle at center to check wrench alignment
+  gfx.drawCircleAtPoint(200, 120, 7)
 
-  pd.drawFPS(0,0)
+  pd.drawFPS(0, 0)
 end
