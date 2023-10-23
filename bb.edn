@@ -55,7 +55,7 @@
                                         ;              with the same tag already exists, the release action will be skipped.
                                         ; (one possible approach is to set this to "release", and then only
                                         ;  increase the "version" in your pdxinfo once you want a release to happen)
-                                        :type "prerelease"}})
+                                        :type "draft"}})
 
       ; validate automated-release type
       (let [accepted-release-types #{"draft" "prerelease" "release"}
