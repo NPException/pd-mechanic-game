@@ -109,7 +109,7 @@ jobs:
         id: sdk-version
         if: steps.init-check.outputs.run == 'true'
         run: |
-          echo "version=$(bb automated-release sdk-version)" >> $GITHUB_OUTPUT
+          echo "version=$(bb automated-release sdk)" >> $GITHUB_OUTPUT
 
       - name: Install Playdate SDK
         id: playdate
