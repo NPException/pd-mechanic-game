@@ -5,6 +5,7 @@ import "CoreLibs/sprites"
 import "CoreLibs/graphics"
 
 local Wrench = require("classes/wrench")
+local Nut = require("classes/nut")
 
 local pd <const> = playdate
 local gfx <const> = pd.graphics
@@ -16,13 +17,14 @@ pd.display.setRefreshRate(0)
 local wrench = Wrench(200, 120)
 wrench:add()
 
+local nut = Nut(200,120)
+nut:add()
+
 function playdate.update()
   wrench:setAngle(playdate.getCrankPosition())
+  nut:setAngle(playdate.getCrankPosition())
 
   gfx.sprite.update()
-
-  -- circle at center to check wrench alignment
-  gfx.drawCircleAtPoint(200, 120, 7)
 
   pd.drawFPS(0, 0)
 end
