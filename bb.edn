@@ -37,6 +37,9 @@
                    :build-output       "./builds/"
                    ; Options that will be used by the automated GitHub release action (unused otherwise)
                    :automated-release  {
+                                        ; Which Playdate SDK version should be used when building an automated release.
+                                        ; Either use the version x.x.x directly, or "latest" to just used the latest version.
+                                        :sdk-version "2.0.3"
                                         ; When a GitHub release is created, this will be used as the tag.
                                         ; (the tag name will be cleaned up if necessary to conform to git tag name restrictions)
                                         ; If a release with the same tag already exists, the newly built
