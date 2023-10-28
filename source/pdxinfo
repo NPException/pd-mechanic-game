@@ -4,5 +4,5 @@ author=NPException
 description=Help people maintain their cars
 bundleID=io.github.npexception.marvin-mechanic
 version=Jam Version
-buildNumber=1
+buildNumber=2
 imagePath=system_assets
